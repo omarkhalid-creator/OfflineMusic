@@ -11,7 +11,7 @@ on:
         required: false
         default: "Release"
         type: choice
-          options: [Debug, Release]
+        options: [Debug, Release]
 
 jobs:
   build-ipa:
