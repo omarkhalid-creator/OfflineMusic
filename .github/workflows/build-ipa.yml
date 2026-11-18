@@ -15,7 +15,7 @@ on:
 
 jobs:
   build-ipa:
-    runs-on: macos-15
+    runs-on: macos-latest
     env:
       CONFIGURATION: ${{ github.event.inputs.configuration || 'Release' }}
 
