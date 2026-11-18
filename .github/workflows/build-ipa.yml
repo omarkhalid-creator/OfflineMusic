@@ -10,7 +10,7 @@ on:
         description: "Build configuration"
         required: false
         default: "Release"
-        type: choice:
+        type: choice
           options: [Debug, Release]
 
 jobs:
