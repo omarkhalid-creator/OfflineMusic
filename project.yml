@@ -1,0 +1,61 @@
+name: OfflineMusic
+options:
+  bundleIdPrefix: com.yourcompany
+  deploymentTarget:
+    iOS: 15.0
+  developmentLanguage: en
+  xcodeVersion: 15.0
+  disableSchemeCreation: false
+
+settings:
+  base:
+    MARKETING_VERSION: 1.0
+    CURRENT_PROJECT_VERSION: 1
+    CODE_SIGNING_STYLE: Manual
+    CODE_SIGN_IDENTITY: ""
+    CODE_SIGNING_REQUIRED: NO
+    PROVISIONING_SPECIFIER: ""
+    ENABLE_BITCODE: NO
+    SWIFT_OPTIMIZATION_LEVEL: -O
+    SWIFT_COMPILATION_MODE: wholemodule
+
+targets:
+  OfflineMusic:
+    type: application
+    platform: iOS
+    deploymentTarget: 15.0
+    sources:
+      - path: OfflineMusic
+        excludes:
+          - Info.plist
+          - Assets.xcassets
+    resources:
+      - OfflineMusic/Assets.xcassets
+    infoPlist:
+      path: OfflineMusic/Info.plist
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.yourcompany.OfflineMusic
+      PRODUCT_NAME: OfflineMusic
+      TARGETED_DEVICE_FAMILY: "1,2"
+      INFOPLIST_FILE: OfflineMusic/Info.plist
+      ENABLE_PREVIEWS: YES
+      ALWAYS_SEARCH_USER_PATHS: NO
+      SWIFT_VERSION: 5.9
+
+schemes:
+  OfflineMusic:
+    build:
+      targets:
+        - OfflineMusic
+    run:
+      buildConfiguration: Debug
+      executable: OfflineMusic
+    test:
+      buildConfiguration: Debug
+      testTargets: []
+    profile:
+      buildConfiguration: Release
+    analyze:
+      buildConfiguration: Release
+    archive:
+      buildConfiguration: Release
